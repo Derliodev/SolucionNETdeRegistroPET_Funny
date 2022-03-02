@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PetFunnyModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Alojamiento">
+    <Key>
+      <PropertyRef Name="Rut" />
+      <PropertyRef Name="NombreMascota" />
+    </Key>
+    <Property Name="Rut" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NombreMascota" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IdTipoMascota" Type="Int32" Nullable="false" />
+    <Property Name="IdTipoAlojamiento" Type="Int32" Nullable="false" />
+    <Property Name="FechaIngreso" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Dias" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="TipoAlojamiento" Relationship="Self.AlojamientoTipoAlojamiento" FromRole="Alojamiento" ToRole="TipoAlojamiento" />
+    <NavigationProperty Name="TipoMascota" Relationship="Self.AlojamientoTipoMascota" FromRole="Alojamiento" ToRole="TipoMascota" />
+    <NavigationProperty Name="Propietario" Relationship="Self.PropietarioAlojamiento" FromRole="Alojamiento" ToRole="Propietario" />
+  </EntityType>
+  <EntityType Name="Propietario">
+    <Key>
+      <PropertyRef Name="Rut" />
+    </Key>
+    <Property Name="Rut" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Nombres" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Apellidos" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Telefono" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Alojamiento" Relationship="Self.PropietarioAlojamiento" FromRole="Propietario" ToRole="Alojamiento" />
+  </EntityType>
+  <EntityType Name="TipoAlojamiento">
+    <Key>
+      <PropertyRef Name="IdTipoAlojamiento" />
+    </Key>
+    <Property Name="IdTipoAlojamiento" Type="Int32" Nullable="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Alojamiento" Relationship="Self.AlojamientoTipoAlojamiento" FromRole="TipoAlojamiento" ToRole="Alojamiento" />
+  </EntityType>
+  <EntityType Name="TipoMascota">
+    <Key>
+      <PropertyRef Name="IdTipoMascota" />
+    </Key>
+    <Property Name="IdTipoMascota" Type="Int32" Nullable="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Alojamiento" Relationship="Self.AlojamientoTipoMascota" FromRole="TipoMascota" ToRole="Alojamiento" />
+  </EntityType>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="UserName" />
+    </Key>
+    <Property Name="UserName" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Nombres" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Apellidos" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <Association Name="AlojamientoTipoAlojamiento">
+    <End Role="TipoAlojamiento" Type="Self.TipoAlojamiento" Multiplicity="1" />
+    <End Role="Alojamiento" Type="Self.Alojamiento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoAlojamiento">
+        <PropertyRef Name="IdTipoAlojamiento" />
+      </Principal>
+      <Dependent Role="Alojamiento">
+        <PropertyRef Name="IdTipoAlojamiento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AlojamientoTipoMascota">
+    <End Role="TipoMascota" Type="Self.TipoMascota" Multiplicity="1" />
+    <End Role="Alojamiento" Type="Self.Alojamiento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoMascota">
+        <PropertyRef Name="IdTipoMascota" />
+      </Principal>
+      <Dependent Role="Alojamiento">
+        <PropertyRef Name="IdTipoMascota" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PropietarioAlojamiento">
+    <End Role="Propietario" Type="Self.Propietario" Multiplicity="1" />
+    <End Role="Alojamiento" Type="Self.Alojamiento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Propietario">
+        <PropertyRef Name="Rut" />
+      </Principal>
+      <Dependent Role="Alojamiento">
+        <PropertyRef Name="Rut" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="PetFunnyEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Alojamiento" EntityType="Self.Alojamiento" />
+    <EntitySet Name="Propietario" EntityType="Self.Propietario" />
+    <EntitySet Name="TipoAlojamiento" EntityType="Self.TipoAlojamiento" />
+    <EntitySet Name="TipoMascota" EntityType="Self.TipoMascota" />
+    <EntitySet Name="Usuarios" EntityType="Self.Usuarios" />
+    <AssociationSet Name="AlojamientoTipoAlojamiento" Association="Self.AlojamientoTipoAlojamiento">
+      <End Role="TipoAlojamiento" EntitySet="TipoAlojamiento" />
+      <End Role="Alojamiento" EntitySet="Alojamiento" />
+    </AssociationSet>
+    <AssociationSet Name="AlojamientoTipoMascota" Association="Self.AlojamientoTipoMascota">
+      <End Role="TipoMascota" EntitySet="TipoMascota" />
+      <End Role="Alojamiento" EntitySet="Alojamiento" />
+    </AssociationSet>
+    <AssociationSet Name="PropietarioAlojamiento" Association="Self.PropietarioAlojamiento">
+      <End Role="Propietario" EntitySet="Propietario" />
+      <End Role="Alojamiento" EntitySet="Alojamiento" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

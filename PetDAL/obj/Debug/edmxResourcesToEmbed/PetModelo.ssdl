@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PetFunnyModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Alojamiento">
+    <Key>
+      <PropertyRef Name="Rut" />
+      <PropertyRef Name="NombreMascota" />
+    </Key>
+    <Property Name="Rut" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="NombreMascota" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="IdTipoMascota" Type="int" Nullable="false" />
+    <Property Name="IdTipoAlojamiento" Type="int" Nullable="false" />
+    <Property Name="FechaIngreso" Type="datetime" Nullable="false" />
+    <Property Name="Dias" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Propietario">
+    <Key>
+      <PropertyRef Name="Rut" />
+    </Key>
+    <Property Name="Rut" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Nombres" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="Apellidos" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="Telefono" Type="nvarchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoAlojamiento">
+    <Key>
+      <PropertyRef Name="IdTipoAlojamiento" />
+    </Key>
+    <Property Name="IdTipoAlojamiento" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoMascota">
+    <Key>
+      <PropertyRef Name="IdTipoMascota" />
+    </Key>
+    <Property Name="IdTipoMascota" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="UserName" />
+    </Key>
+    <Property Name="UserName" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Nombres" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="Apellidos" Type="nvarchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <Association Name="AlojamientoTipoAlojamiento">
+    <End Role="TipoAlojamiento" Type="Self.TipoAlojamiento" Multiplicity="1" />
+    <End Role="Alojamiento" Type="Self.Alojamiento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoAlojamiento">
+        <PropertyRef Name="IdTipoAlojamiento" />
+      </Principal>
+      <Dependent Role="Alojamiento">
+        <PropertyRef Name="IdTipoAlojamiento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AlojamientoTipoMascota">
+    <End Role="TipoMascota" Type="Self.TipoMascota" Multiplicity="1" />
+    <End Role="Alojamiento" Type="Self.Alojamiento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoMascota">
+        <PropertyRef Name="IdTipoMascota" />
+      </Principal>
+      <Dependent Role="Alojamiento">
+        <PropertyRef Name="IdTipoMascota" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PropietarioAlojamiento">
+    <End Role="Propietario" Type="Self.Propietario" Multiplicity="1" />
+    <End Role="Alojamiento" Type="Self.Alojamiento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Propietario">
+        <PropertyRef Name="Rut" />
+      </Principal>
+      <Dependent Role="Alojamiento">
+        <PropertyRef Name="Rut" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="PetFunnyModelStoreContainer">
+    <EntitySet Name="Alojamiento" EntityType="Self.Alojamiento" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Propietario" EntityType="Self.Propietario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipoAlojamiento" EntityType="Self.TipoAlojamiento" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipoMascota" EntityType="Self.TipoMascota" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="AlojamientoTipoAlojamiento" Association="Self.AlojamientoTipoAlojamiento">
+      <End Role="TipoAlojamiento" EntitySet="TipoAlojamiento" />
+      <End Role="Alojamiento" EntitySet="Alojamiento" />
+    </AssociationSet>
+    <AssociationSet Name="AlojamientoTipoMascota" Association="Self.AlojamientoTipoMascota">
+      <End Role="TipoMascota" EntitySet="TipoMascota" />
+      <End Role="Alojamiento" EntitySet="Alojamiento" />
+    </AssociationSet>
+    <AssociationSet Name="PropietarioAlojamiento" Association="Self.PropietarioAlojamiento">
+      <End Role="Propietario" EntitySet="Propietario" />
+      <End Role="Alojamiento" EntitySet="Alojamiento" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

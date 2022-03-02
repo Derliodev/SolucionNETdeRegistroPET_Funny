@@ -1,0 +1,26 @@
+C:\Users\derliodev\source\repos\EXAMENFINAL\PetNegocio\bin\Debug\PetNegocio.dll.config
+C:\Users\derliodev\source\repos\EXAMENFINAL\PetNegocio\bin\Debug\PetNegocio.dll
+C:\Users\derliodev\source\repos\EXAMENFINAL\PetNegocio\bin\Debug\PetNegocio.pdb
+C:\Users\derliodev\source\repos\EXAMENFINAL\PetNegocio\bin\Debug\EntityFramework.dll
+C:\Users\derliodev\source\repos\EXAMENFINAL\PetNegocio\bin\Debug\PetDAL.dll
+C:\Users\derliodev\source\repos\EXAMENFINAL\PetNegocio\bin\Debug\PetDAL.pdb
+C:\Users\derliodev\source\repos\EXAMENFINAL\PetNegocio\bin\Debug\PetDAL.dll.config
+C:\Users\derliodev\source\repos\EXAMENFINAL\PetNegocio\bin\Debug\EntityFramework.xml
+C:\Users\derliodev\source\repos\EXAMENFINAL\PetNegocio\obj\Debug\PetNegocio.csprojAssemblyReference.cache
+C:\Users\derliodev\source\repos\EXAMENFINAL\PetNegocio\obj\Debug\PetNegocio.csproj.CoreCompileInputs.cache
+C:\Users\derliodev\source\repos\EXAMENFINAL\PetNegocio\obj\Debug\PetNegocio.csproj.CopyComplete
+C:\Users\derliodev\source\repos\EXAMENFINAL\PetNegocio\obj\Debug\PetNegocio.dll
+C:\Users\derliodev\source\repos\EXAMENFINAL\PetNegocio\obj\Debug\PetNegocio.pdb
+C:\Repos\Componentes Web NET\EXAMEN FINAL\EXAMENFINAL\PetNegocio\bin\Debug\PetNegocio.dll.config
+C:\Repos\Componentes Web NET\EXAMEN FINAL\EXAMENFINAL\PetNegocio\bin\Debug\PetNegocio.dll
+C:\Repos\Componentes Web NET\EXAMEN FINAL\EXAMENFINAL\PetNegocio\bin\Debug\PetNegocio.pdb
+C:\Repos\Componentes Web NET\EXAMEN FINAL\EXAMENFINAL\PetNegocio\bin\Debug\EntityFramework.dll
+C:\Repos\Componentes Web NET\EXAMEN FINAL\EXAMENFINAL\PetNegocio\bin\Debug\PetDAL.dll
+C:\Repos\Componentes Web NET\EXAMEN FINAL\EXAMENFINAL\PetNegocio\bin\Debug\PetDAL.pdb
+C:\Repos\Componentes Web NET\EXAMEN FINAL\EXAMENFINAL\PetNegocio\bin\Debug\PetDAL.dll.config
+C:\Repos\Componentes Web NET\EXAMEN FINAL\EXAMENFINAL\PetNegocio\bin\Debug\EntityFramework.xml
+C:\Repos\Componentes Web NET\EXAMEN FINAL\EXAMENFINAL\PetNegocio\obj\Debug\PetNegocio.csprojAssemblyReference.cache
+C:\Repos\Componentes Web NET\EXAMEN FINAL\EXAMENFINAL\PetNegocio\obj\Debug\PetNegocio.csproj.CoreCompileInputs.cache
+C:\Repos\Componentes Web NET\EXAMEN FINAL\EXAMENFINAL\PetNegocio\obj\Debug\PetNegocio.csproj.CopyComplete
+C:\Repos\Componentes Web NET\EXAMEN FINAL\EXAMENFINAL\PetNegocio\obj\Debug\PetNegocio.dll
+C:\Repos\Componentes Web NET\EXAMEN FINAL\EXAMENFINAL\PetNegocio\obj\Debug\PetNegocio.pdb

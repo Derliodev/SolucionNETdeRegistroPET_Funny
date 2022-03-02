@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PetFunnyModelStoreContainer" CdmEntityContainer="PetFunnyEntities">
+    <EntitySetMapping Name="Alojamiento">
+      <EntityTypeMapping TypeName="PetFunnyModel.Alojamiento">
+        <MappingFragment StoreEntitySet="Alojamiento">
+          <ScalarProperty Name="Rut" ColumnName="Rut" />
+          <ScalarProperty Name="NombreMascota" ColumnName="NombreMascota" />
+          <ScalarProperty Name="IdTipoMascota" ColumnName="IdTipoMascota" />
+          <ScalarProperty Name="IdTipoAlojamiento" ColumnName="IdTipoAlojamiento" />
+          <ScalarProperty Name="FechaIngreso" ColumnName="FechaIngreso" />
+          <ScalarProperty Name="Dias" ColumnName="Dias" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Propietario">
+      <EntityTypeMapping TypeName="PetFunnyModel.Propietario">
+        <MappingFragment StoreEntitySet="Propietario">
+          <ScalarProperty Name="Rut" ColumnName="Rut" />
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+          <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoAlojamiento">
+      <EntityTypeMapping TypeName="PetFunnyModel.TipoAlojamiento">
+        <MappingFragment StoreEntitySet="TipoAlojamiento">
+          <ScalarProperty Name="IdTipoAlojamiento" ColumnName="IdTipoAlojamiento" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoMascota">
+      <EntityTypeMapping TypeName="PetFunnyModel.TipoMascota">
+        <MappingFragment StoreEntitySet="TipoMascota">
+          <ScalarProperty Name="IdTipoMascota" ColumnName="IdTipoMascota" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuarios">
+      <EntityTypeMapping TypeName="PetFunnyModel.Usuarios">
+        <MappingFragment StoreEntitySet="Usuarios">
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+          <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

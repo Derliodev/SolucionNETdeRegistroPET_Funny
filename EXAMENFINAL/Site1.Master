@@ -1,0 +1,58 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="EXAMENFINAL.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link rel="stylesheet" href="Style.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div style="position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    padding: 10px 0px;
+    background-color: red;
+    border-top: 2px solid white;
+    text-align: center;
+    ">
+        <h1>PetFunny</h1>
+        <h3>SolucionWeb</h3>
+    </div>
+    <form id="form1" runat="server">
+        <div style="margin-top:140px">
+            <div class="mapa">
+                <asp:Menu ID="Menu1" runat="server" BackColor="#FFFBD6" DataSourceID="SiteMapDataSource1" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#990000" StaticSubMenuIndent="10px">
+                    <DynamicHoverStyle BackColor="#990000" ForeColor="White" />
+                    <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                    <DynamicMenuStyle BackColor="#FFFBD6" />
+                    <DynamicSelectedStyle BackColor="#FFCC66" />
+                    <StaticHoverStyle BackColor="#990000" ForeColor="White" />
+                    <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                    <StaticSelectedStyle BackColor="#FFCC66" />
+                </asp:Menu>
+                <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+            </div>
+            <br /><br /><br />
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+    <div style="position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    padding: 10px 0px;
+    background-color: red;
+    border-top: 2px solid white;
+    text-align: center;
+    ">
+        <h3>Leonardo Rios C.</h3>
+        <h4>lio.r@outlook.com</h4>
+    </div>
+</body>
+</html>

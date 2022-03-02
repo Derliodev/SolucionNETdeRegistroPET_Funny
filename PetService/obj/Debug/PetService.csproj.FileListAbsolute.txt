@@ -1,0 +1,32 @@
+C:\Users\derliodev\source\repos\EXAMENFINAL\PetService\bin\PetService.dll.config
+C:\Users\derliodev\source\repos\EXAMENFINAL\PetService\bin\PetService.dll
+C:\Users\derliodev\source\repos\EXAMENFINAL\PetService\bin\PetService.pdb
+C:\Users\derliodev\source\repos\EXAMENFINAL\PetService\bin\EntityFramework.dll
+C:\Users\derliodev\source\repos\EXAMENFINAL\PetService\bin\PetNegocio.dll
+C:\Users\derliodev\source\repos\EXAMENFINAL\PetService\bin\PetDAL.dll
+C:\Users\derliodev\source\repos\EXAMENFINAL\PetService\bin\PetNegocio.pdb
+C:\Users\derliodev\source\repos\EXAMENFINAL\PetService\bin\PetNegocio.dll.config
+C:\Users\derliodev\source\repos\EXAMENFINAL\PetService\bin\EntityFramework.xml
+C:\Users\derliodev\source\repos\EXAMENFINAL\PetService\bin\PetDAL.pdb
+C:\Users\derliodev\source\repos\EXAMENFINAL\PetService\bin\PetDAL.dll.config
+C:\Users\derliodev\source\repos\EXAMENFINAL\PetService\obj\Debug\PetService.csprojAssemblyReference.cache
+C:\Users\derliodev\source\repos\EXAMENFINAL\PetService\obj\Debug\PetService.csproj.CoreCompileInputs.cache
+C:\Users\derliodev\source\repos\EXAMENFINAL\PetService\obj\Debug\PetService.csproj.CopyComplete
+C:\Users\derliodev\source\repos\EXAMENFINAL\PetService\obj\Debug\PetService.dll
+C:\Users\derliodev\source\repos\EXAMENFINAL\PetService\obj\Debug\PetService.pdb
+C:\Repos\Componentes Web NET\EXAMEN FINAL\EXAMENFINAL\PetService\bin\PetService.dll.config
+C:\Repos\Componentes Web NET\EXAMEN FINAL\EXAMENFINAL\PetService\bin\PetService.dll
+C:\Repos\Componentes Web NET\EXAMEN FINAL\EXAMENFINAL\PetService\bin\PetService.pdb
+C:\Repos\Componentes Web NET\EXAMEN FINAL\EXAMENFINAL\PetService\bin\EntityFramework.dll
+C:\Repos\Componentes Web NET\EXAMEN FINAL\EXAMENFINAL\PetService\bin\PetNegocio.dll
+C:\Repos\Componentes Web NET\EXAMEN FINAL\EXAMENFINAL\PetService\bin\PetDAL.dll
+C:\Repos\Componentes Web NET\EXAMEN FINAL\EXAMENFINAL\PetService\bin\PetNegocio.pdb
+C:\Repos\Componentes Web NET\EXAMEN FINAL\EXAMENFINAL\PetService\bin\PetNegocio.dll.config
+C:\Repos\Componentes Web NET\EXAMEN FINAL\EXAMENFINAL\PetService\bin\EntityFramework.xml
+C:\Repos\Componentes Web NET\EXAMEN FINAL\EXAMENFINAL\PetService\bin\PetDAL.pdb
+C:\Repos\Componentes Web NET\EXAMEN FINAL\EXAMENFINAL\PetService\bin\PetDAL.dll.config
+C:\Repos\Componentes Web NET\EXAMEN FINAL\EXAMENFINAL\PetService\obj\Debug\PetService.csprojAssemblyReference.cache
+C:\Repos\Componentes Web NET\EXAMEN FINAL\EXAMENFINAL\PetService\obj\Debug\PetService.csproj.CoreCompileInputs.cache
+C:\Repos\Componentes Web NET\EXAMEN FINAL\EXAMENFINAL\PetService\obj\Debug\PetService.csproj.CopyComplete
+C:\Repos\Componentes Web NET\EXAMEN FINAL\EXAMENFINAL\PetService\obj\Debug\PetService.dll
+C:\Repos\Componentes Web NET\EXAMEN FINAL\EXAMENFINAL\PetService\obj\Debug\PetService.pdb
